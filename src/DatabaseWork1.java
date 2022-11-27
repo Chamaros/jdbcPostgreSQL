@@ -21,7 +21,7 @@ public class DatabaseWork1 {
             Class.forName("org.postgresql.Driver");//1. bunu sadece basta yukledigimiz driver i yuklediysek kullanabiliriz. postgreSQL-42.5.0.jar olani
 
             //2.SETTING UP THE CONNECTION
-            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/" + dbname, user, password); //DEFAULT PORT IS 5432 O YUZDEN YAZDIK
+            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/"+ dbname, user, password); //DEFAULT PORT IS 5432 O YUZDEN YAZDIK
 
             //PASSING CONDITION TO CHECK THE CONNECTION SUCCESSFULL OR NOT
             if (conn != null) {
@@ -42,7 +42,7 @@ public class DatabaseWork1 {
         try {
             // in postgreSQL if you want auto increment then there is a  keyword that is:SERIAL
             // ORACLE DA ISE AUTO_INCREMENT olarak geciyor bu .
-            String query = "create table"+table_name+ "(Emp_Id SERIAL, name varchar(200), email varchar(200), country varchar(200), primary key(Emp_Id)";
+            String query = "create table "+table_name+"(EmpId SERIAL, name varchar(200), email varchar(200), country varchar(200), primary key(EmpId))";
                  //create a statement
             statement = conn.createStatement();
             //executing our query by putting it into statement

@@ -10,7 +10,7 @@ public class Main {
         Connection conn = db.connect_to_db("Database1","postgres","Dante927.");
 
         //calling the method to make a new table
-        db.createTable(conn,"Employee");
+        db.createTable(conn,"employee");
 
     }
 }
